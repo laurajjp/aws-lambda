@@ -8,7 +8,17 @@ import numpy as np
 import pandas as pd
 import rasterio
 
+######
+def magic1(data1, data2):
+    c = data1 + data2
+    return c
 
+def magic2(a, b, c):
+    result = magic1(a, b)
+    final = result + c
+    return final
+    
+######
 def predict_window(data, model, bandnames):
     """
     Predict the value of each pixel in a window using an ml model.
